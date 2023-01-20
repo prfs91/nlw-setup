@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #09090a;
+  height: 100vh;
+  color: white;
+}
+
+header {
+  display: flex; /* nesse caso vai colocar um elemento ao lado do outro dentro da caixa de cabeçalho */
+  align-items: center; /* centraliza todos os elementos dentro do header */
+  justify-content: space-between; /* pega toda a largura do header e justifica os elementos com um espaço entre eles */
+
+  padding: 48px; /* preenchimento interno de 48 pixels no cabeçalho, quando eu uso apenas um valor ele aplica em cima, em baixo e nas laterais o tamanho aplicado */
+}
+
+button {
+  padding: 16px 24px; /* aplica em cima em em baixo 16 pixels e 24 pixels nas laterais */
+  border-radius: 8px; /* arredondamento da borda de 8 pixels */
+  border: 1px solid #8b5cf6; /* uma borda de 1 pixel solida na cor hexadecimal informada, dashed é borda com tracinhos */
+  background-color: transparent; /* cor do plano de fundo do botão */
+  color: white; /* cor do texto do botão */
+
+  display: flex; /* disposição dos elementos dentro de um elemento, no caso, do botão, sendo flexível assim podemos usar o alinhamento dos itens*/
+  align-items: center; /* só funciona se o flex funcionar, se não tiver o flex não faz o alinhamento dos elementos dentro do botão */
+  gap: 12px; /* quando o meu elemento é do tipo flex eu posso utilizar o gap para o espaço entre os elementos que tem dentro do botão nesse caso */
+
+  font-family: "Inter"; /* família da fonte chamada Inter */
+  font-weight: 600; /* peso da fonte 600, espessura */
+  font-size: 16px; /* tamanho da fonte */
+  line-height: 125%; /* altura da linha */
+}
+
+/* tudo que tiver dentro do forms, o meu forme é um id, esse nome não pode ser repetido no html, o seletor é usado com #<nome do id> diferente das classes que é usado .<nome da classe> */
+#form-habits {
+  display: flex;
+
+  padding: 0 48px; /* da um espaço de 0 em cima e em baixo do form e de 48 pixels nas laterais do form */
+}
+
+.habits {
+  margin-top: 60px; /* coloca um espaço de 60 pixels da margem superior da div dos hábitos */
+  display: flex; /* disposição dos elementos dentro da classe habits da div flexíveis */
+  flex-direction: column; /* muda a direção dos elementos que estavam um ao lado do outro em flex para uma coluna, ou seja, um a baixo do outro os ícones dos hábitos */
+  gap: 24px; /* espaço de 24 pixels entre cada hábito */
+}
+
+.habit {
+  width: 64px; /* largura de cada hábito */
+  height: 64px; /* altura de cada hábito */
+
+  font-size: 32px; /* tamanho da fonte de 32 px, cada ícone dos emoticons é como se fosse uma fonte, logo eles aumentam de tamanho */
+
+  display: flex; /* disposição dos elementos dentro da classe habit da div flexíveis */
+  align-items: center; /* coloca os itens centralizados na linha vertical */
+  justify-content: center; /* coloca os itens alinhados ao centro na linha horizontal */
+}
+
+.days {
+  display: flex; /* deixa cada elemento da caixa div de classe days um ao lado do outro */
+  gap: 48px; /* espaço entre os inputs, as caixas */
+  margin-left: 32px; /* deixa uma margem de 32 pixels a esquerda */
+}
+
+.day {
+  display: flex; /* deixa cada elemento da caixa div de classe day um ao lado do outro */
+  flex-direction: column; /* muda a direção dos elementos que estavam um ao lado do outro em flex para uma coluna, ou seja, um a baixo do outro */
+  gap: 24px; /* espaço entre as linhas da coluna, pois a direção está em coluna e não lado a lado */
+}
+
+/* configuração de todas as divs que estão dentro da classe day, onde tem as datas */
+.day div {
+  margin-bottom: 8px; /* margem abaixo das datas, ou seja de todas as divs da classe day, somando com o gap de 24 pixels da configuração da classe day dá um espaçamento de 24px + 8px que equivale a 32 pixels */
+  font-family: "Roboto Mono"; /* família da fonte chamada Roboto Mono */
+  font-size: 20px; /* tamanho da fonte 20 pixels */
+  line-height: 125%; /* identical to box height, or 25px */
+  color: #a1a1aa; /* cor do texto das divs que estão dentro da classe day */
+  text-align: center; /* texto alinhado ao centro */
+}
+
+/* configuração geral dos inputs */
+input {
+  appearance: none; /* aparencia dos inputs como nenhuma, quando eu tiro a aparência eu tenho a possibilidade de usar algumas outras propriedades, assim como o flex descrito anteriormente */
+  -webkit-appearance: none; /* alguns navegadores precisam ser declarados dessa forma acompanhado do appearance senão eles não entendem então usamos o prefixo -webkit- */
+
+  width: 64px; /* lagura dos inputs */
+  height: 64px; /* altura dos inputs */
+
+  border: 2px solid #27272a; /* espessura de 2 pixels na borda sendo uma linha sólida com a cor informada */
+  border-radius: 8px; /* arredondamento da borda dos inputs */
+
+  background: #18181b; /* cor de fundo dos inputs */
+}
+
+/* configuração dos inputs que estiverem marcados, é um tipo de seletor conhecido como "pseudo-selector" */
+input:checked {
+  background: #8b5cf6; /* cor de fundo dos inputs marcados (checked) */
+  border: 2px solid #a78bfa; /* espessura de 2 pixels na borda sendo uma linha sólida com a cor informada dos inputs marcados (checked) */
+}

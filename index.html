@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Adiciona a fontes de texto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Roboto+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Habits</title>
+
+    <!-- aqui importamos o CSS para o HTML -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <!-- Cabeçalho -->
+    <header>
+      <!-- Imagem do logotipo do aplicativo -->
+      <img src="./assets/logo.svg" alt="Logomarca do aplicativo Habits" />
+
+      <button>
+        <!-- Botão Registrar o dia -->
+        <img src="./assets/plus.svg" alt="Ícone sinal de mais roxo" />
+
+        Registrar o meu dia
+      </button>
+    </header>
+    <!-- Geralmente os inputs ficam dentro de uma caixa chamada form, aqui usamos uma identificação, tipo RG mas que não pode ser repetido esse nome em outra id ou em alguma classe -->
+    <form id="form-habits">
+      <!-- Divs são uma caixa genérica, mas podemos criar classificações nela, classes podem ser repetidas os nomes, aqui teremos os hábitos -->
+      <div class="habits">
+        <!-- Nessa div temos os hábito, se apertamos Windows + . abre os emoticons -->
+        <div class="habit">🏃</div>
+        <div class="habit">💧</div>
+        <div class="habit">🍎</div>
+      </div>
+
+      <!-- Nessa div temos os dias -->
+      <div class="days">
+        <!-- Nessa div temos o dia, se colocarmos div.day ou o nome que for dar a div e darmos enter ele cria a div pra gente -->
+        <div class="day">
+          <div>19/01</div>
+          <!-- Os inputs podem ser do tipo texto (text), bolinha de marcação (radio) ou outros, usaremos a caixa de marcação (checkbox) -->
+
+          <input type="checkbox" name="run" />
+          <input type="checkbox" name="water" />
+          <input type="checkbox" name="food" />
+        </div>
+
+        <div class="day">
+          <div>20/01</div>
+          <!-- Os inputs podem ser do tipo texto (text), bolinha de marcação (radio) ou outros, usaremos a caixa de marcação (checkbox) -->
+
+          <input type="checkbox" name="run" />
+          <input type="checkbox" name="water" />
+          <input type="checkbox" name="food" />
+        </div>
+
+        <div class="day">
+          <div>21/01</div>
+          <!-- Os inputs podem ser do tipo texto (text), bolinha de marcação (radio) ou outros, usaremos a caixa de marcação (checkbox) -->
+
+          <input type="checkbox" name="run" />
+          <input type="checkbox" name="water" />
+          <input type="checkbox" name="food" />
+        </div>
+      </div>
+    </form>
+
+    <!-- aqui importamos a biblioteca da Rocketseat a ser usada no projeto -->
+    <script src="https://cdn.jsdelivr.net/gh/maykbrito/libs/NLWSetup/source/NLWSetup.js"></script>
+    <!-- aqui importamos o JavaScript no HTML -->
+    <script src="./script.js"></script>
+  </body>
+</html>
