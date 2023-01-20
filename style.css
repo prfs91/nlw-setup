@@ -16,6 +16,10 @@ header {
   justify-content: space-between; /* pega toda a largura do header e justifica os elementos com um espaço entre eles */
 
   padding: 48px; /* preenchimento interno de 48 pixels no cabeçalho, quando eu uso apenas um valor ele aplica em cima, em baixo e nas laterais o tamanho aplicado */
+
+  position: fixed; /* posiciona o cabeçalho fixado ao movimentar a barra de rolagem */
+  width: 100%; /* a largura do cabeçalho ocupa toda extensão da página */
+  background-color: #09090a;
 }
 
 button {
@@ -39,7 +43,8 @@ button {
 #form-habits {
   display: flex;
 
-  padding: 0 48px; /* da um espaço de 0 em cima e em baixo do form e de 48 pixels nas laterais do form */
+  padding: 182px 48px 48px; /* da um espaço de 182 pixels em cima do form (por causa do header, se for zero o header fica sobreposto ao form) e de 48 pixels nas laterais do form e 48 pixels em baixo do form */
+  width: fit-content; /* encaixa o conteúdo do form de id habits na largura do form */
 }
 
 .habits {
@@ -100,4 +105,11 @@ input {
 input:checked {
   background: #8b5cf6; /* cor de fundo dos inputs marcados (checked) */
   border: 2px solid #a78bfa; /* espessura de 2 pixels na borda sendo uma linha sólida com a cor informada dos inputs marcados (checked) */
+}
+
+/* responsividade no css para dispositivos conforme o tamanho especificado */
+@media (max-width: 570px) {
+  button div {
+    display: none; /* quando a tela for menor que 570px o conteúdo da div que existe no button vai sumir */
+  }
 }
