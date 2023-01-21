@@ -32,7 +32,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O Habits é um app para ajudar a rastrear os hábitos.
 
-- [Visite o projeto online] (https://prfs91.github.io/nlw-setup/)
+- [Visite o projeto online](https://prfs91.github.io/nlw-setup/)
 
 ## 🔖 Layout
 
