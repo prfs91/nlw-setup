@@ -27,9 +27,11 @@ function add() {
 }
 
 function save() {
+  /* parse transforma um objeto em um texto */
   localStorage.setItem("NLWSetup@habits", JSON.stringify(nlwSetup.data))
 }
 
+/* parse transforma um texto em um objeto */
 const data = JSON.parse(localStorage.getItem("NLWSetup@habits")) || {}
 nlwSetup.setData(data)
 nlwSetup.load()
